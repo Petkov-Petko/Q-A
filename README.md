@@ -61,7 +61,7 @@ const subtract = (x, y) => {
 };
 ````
 
-# **Objects**
+# **✅Objects**
    Структура от данни от референтен тип.
    Те се състоят от ключ и стойност (Key and Value);
 - ### What do we use objects for?
