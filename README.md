@@ -131,6 +131,19 @@ const deepCopy = JSON.parse(JSON.stringify(originalObject));
 import _ from 'lodash';
 const deepCopy = _.cloneDeep(originalObj);
 ```
+# ✅**Scope:**
+
+Пространстворо където дадена променлива е видима и достъпна.
+
+**Видове:**
+
+а) Глобални.
+
+б) Локални (functional and block scope).
+
+# ✅**Closure**
+Функция дефинирана в друга функция. Вътрешната функция има доступ до скоупа на външната функция. Те позволяват създаването на privite variables във скоупа, който не могат да бъдат достъпени отвън.
+
 
 # ✅**expression and Statemant**
 
