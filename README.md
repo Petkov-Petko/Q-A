@@ -127,3 +127,27 @@ const subtract = (x, y) => {
    import _ from 'lodash';
    const deepCopy = _.cloneDeep(originalObj);
    ```
+
+   # ✅**expression and Statemant**
+
+- ### Expression: 
+
+    Код който връща стойност.
+
+
+````
+1 + 2;
+"Hello, world!";
+true;
+
+````
+
+- ### Statemant:
+Единица от код, която извършва действие
+````
+x = 10;
+console.log("Hello, world!");
+const person = { name: "John Doe" };
+````
+
+*Основната разлика между expression и statement е, че expression винаги връща стойност, докато statement не винаги. Например, изразът 1 + 2 връща стойността 3, докато изявлението x = 10 не връща стойност.*
