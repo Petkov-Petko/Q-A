@@ -176,7 +176,7 @@ x = 10;
 console.log("Hello, world!");
 const person = { name: "John Doe" };
 ````
-
+*Основната разлика между expression и statement е, че expression винаги връща стойност, докато statement не винаги. Например, изразът 1 + 2 връща стойността 3, докато изявлението x = 10 не връща стойност.*
 # ✅**Imperative and Declarative programming:**
 - ### Imperative: 
 
@@ -184,7 +184,7 @@ const person = { name: "John Doe" };
 - ### Declarative:
 Декларативният код описва какво трябва да се постигне, без да се определя как да се постигне. Ползват се методи.
 
-*Основната разлика между expression и statement е, че expression винаги връща стойност, докато statement не винаги. Например, изразът 1 + 2 връща стойността 3, докато изявлението x = 10 не връща стойност.*
+
 
 # ✅**Try-catch blocks:**
 
