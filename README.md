@@ -397,8 +397,14 @@ Git е система за управление на версиите. Тя по
 
 ![1_T6WwNr9LfSE3EzRACaNh7w](https://github.com/Petkov-Petko/Q-A/assets/141727561/4ac683d4-b7ad-436d-b920-c2ed7746f518)
 
-## ⚪ Stack:: 
+## ⚪ Stack:
 LIFO (Last In, First Out) структура от данни, при която последният добавен елемент е първият, който се премахва.
 
 ![download](https://github.com/Petkov-Petko/Q-A/assets/141727561/0631605b-31ea-46e2-8af8-db5884aa4022)
+
+## ⚪ Queue (Опашка): 
+Описание: FIFO (First In, First Out) структура от данни, при която първият добавен елемент е първият, който се премахва.
+
+![JavaScript-Queue-Illustration](https://github.com/Petkov-Petko/Q-A/assets/141727561/fe55d222-cd10-4df7-9051-167006f6175f)
+
 
