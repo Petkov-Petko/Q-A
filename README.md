@@ -596,7 +596,7 @@ URL (Uniform Resource Locator) Това е адрес, който идентиф
 
 
 Например, в URL адреса "https://www.example.com/page1/page2?key1=value1#section3", 
-протоколът е `"https://"`, домейнът е `"[www.example.com](http://www.example.com/)"`, пътят е `"/page1/page2"`, параметрите са `"?key1=value1"`, анкората е `"#section3"`.
+протоколът е `"https://"`, домейнът е `http://www.example.com/`, пътят е `"/page1/page2"`, параметрите са `"?key1=value1"`, анкората е `"#section3"`.
 
 
  # **✅DOM  (Document Object Model)** 
