@@ -174,6 +174,12 @@ const deepCopy = _.cloneDeep(originalObj);
  
  Скоупа в който променлива е дефинирана и до който има достъп.
 
+ var: Function-scoped, hoisted with initialization as undefined, can be redeclared.
+
+ let: Block-scoped, hoisted without initialization (temporal dead zone), cannot be redeclared within the same scope.
+
+const: Block-scoped, hoisted without initialization (temporal dead zone), cannot be redeclared or reassigned, but object properties and array elements can be modified.
+
 # ✅**Closure**
 Функция дефинирана в друга функция. Вътрешната функция има доступ до скоупа на външната функция. Те позволяват създаването на privite variables във скоупа, който не могат да бъдат достъпени отвън.
 
