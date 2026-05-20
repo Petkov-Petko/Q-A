@@ -717,15 +717,15 @@ _HTTP, или Хипертекстовият протокол за пренос,
 - Заглавията на HTTP съдържат метаинформация за заявката или отговора, като например Content-Type, User-Agent и други. 
 
 ### Статусните кодове: 
--Informational responses (100 – 199)
+- Informational responses (100 – 199)
 
--Successful responses (200 – 299)
+- Successful responses (200 – 299)
 
--Redirection messages (300 – 399)
+- Redirection messages (300 – 399)
 
--Client error responses (400 – 499)
+- Client error responses (400 – 499)
 
--Server error responses (500 – 599)
+- Server error responses (500 – 599)
 
 # **✅ What is the request body**
 
@@ -736,14 +736,186 @@ _HTTP, или Хипертекстовият протокол за пренос,
 
 AJAX означава Асинхронен JavaScript и XML. Това е набор от техники за уеб разработка, които се използват за създаване на асинхронни уеб приложения. С AJAX уеб страници могат да изпращат и извличат данни от сървъра асинхронно, без да пречат на показването и поведението на съществуващата страница. Това позволява по-плавно и по-отзивчиво потребителско изживяване, тъй като съдържанието може да се актуализира динамично, без да се изисква пълното презареждане на цялата страница.
 
-# **🔥🔥🔥 React  🔥🔥🔥** 
+# **🔥🔥🔥 React  🔥🔥🔥**
 
-_React.js е библиотека за създаване на потребителски интерфейси в уеб приложения. Тя е разработена от Facebook и се използва за създаване на динамични, интерактивни и ефективни уеб приложения. Една от ключовите характеристики на React.js е компонентният подход към създаването на интерфейси._
+_React е JavaScript библиотека за изграждане на динамични потребителски интерфейси (UI), базирана на компоненти и state-driven rendering._
 
-# **✅React component**
+## **✅ Virtual DOM**
+React използва Virtual DOM — леко копие на истинския DOM.
+
+Когато state се промени:
+
+- React създава нов Virtual DOM
+- Сравнява го със стария (diffing)
+- Обновява само променените части в реалния DOM
+
+## **✅React component**
 
 В React, компонентът е основната строителна единица за създаване на потребителски интерфейси. Той представлява изолирана и многократно използваема част от интерфейса, която може да съдържа HTML елементи, други компоненти и логика за визуализация и поведение.
 
-# **✅What is JSX?**
-JSX е синтаксис, който изглежда като HTML, но е JavaScript.
+## **✅What is JSX?**
+JSX е syntax extension за JavaScript.
+Изглежда като HTML но не е, React го превръща в JavaScript.
 
+## **✅Props**
+Props = properties.
+
+Това са данни, които parent component подава към child component.
+
+```function User(props) {
+  return <h1>{props.name}</h1>;
+}
+<User name="Petko" />
+```
+## **✅Hooks**
+Hooks са специални React функции.
+
+### useState
+Позволява добавянето на променливи на състоянието във функционални компоненти.
+``` 
+const [count, setCount] = useState(0);
+```
+- count → текущата стойност
+- setCount → функция за update
+
+### useEffect
+Позволява изпълнението на странични ефекти (side effects) във функционални компоненти (напр. заявки към API, промяна на DOM, тайнери).
+```
+useEffect(() => {
+  console.log(count);
+}, [count]);
+```
+Effect-ът се execute-ва:
+
+- когато count се промени
+  
+### useRef
+useRef е React хук, който ви позволява да запазите стойност, която се пази между отделните рендери на компонента, без да предизвиква ново рендиране при промяната ѝ.
+
+## useContext
+
+Достъп до Context API.
+
+## useMemo
+
+Мемоизира expensive calculations.
+
+###useCallback
+
+Мемоизира функции.
+
+## custom hooks
+
+Позволяват reusable logic.
+
+## ✅ React Router
+Използва се за navigation между страници в SPA applications.
+```
+<Route path="/about" element={<About />} />
+```
+
+# ⚫⚫⚫ Next.js ⚫⚫⚫
+*Next.js е React framework за изграждане на full-stack web applications.*
+
+Той надгражда React като добавя:
+
+- routing
+- server-side rendering
+- API routes
+- оптимизация
+- SEO
+- backend functionality
+
+## File-based Routing
+В Next.js routing-ът се базира на файлове.
+```
+app/page.js
+➡ /
+app/about/page.js
+➡ /about
+```
+
+## Server-Side Rendering (SSR)
+Страницата се render-ва на сървъра при всяка заявка.
+
+- По-добро SEO
+- По-бързо initial loading
+
+## Static Site Generation (SSG)
+HTML се генерира по време на build process.
+
+- Много бързо зареждане
+
+## Client-Side Rendering (CSR)
+React компонентите могат да се render-ват и в browser-a.
+
+Ако компонентът използва:
+- useState
+- useEffect
+- browser APIs
+
+трябва да бъде:
+```
+"use client";
+```
+
+## Server Components
+По default компонентите в Next.js са Server Components.
+
+- Render-ват се на сървъра
+- По-малко JavaScript към browser-а
+- Better performance
+
+## API Routes
+Next.js позволява backend endpoints.
+```
+app/api/users/route.js
+```
+
+## Middleware
+Middleware позволява logic преди request.
+
+Примери:
+
+- authentication
+- redirects
+- localization
+
+# **🔵🔵🔵Docker🔵🔵🔵**
+
+Docker е инструмент, който ти позволява да пускаш приложения в изолирана и напълно подготвена среда, наречена container.
+
+**Контейнерът съдържа:**
+- приложенито 
+- библиотеки
+- runtime-а (Node, Python, PHP и т.н.)
+- конфигурацията
+
+## ✅Основни понятия
+### Image
+*Шаблон на приложението.*
+
+Image-ът съдържа:
+- source code
+- dependencies
+- runtime
+- инструкции за стартиране
+  
+### Container
+
+Работещо копие на image.
+
+Container = изолирана среда, в която приложението работи.
+
+Може да имаш много containers от един image.
+
+### Dockerfile
+Файл с инструкции как се build-ва image.
+
+### Docker Compose
+Docker Compose позволява да стартираш няколко services едновременно.
+
+*Пример:*
+- frontend
+- backend
+- database
